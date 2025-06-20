@@ -1,9 +1,11 @@
 import { UserDetailScreen } from '@repo/app/src/features/user/detail-screen'
 import { Stack } from 'expo-router'
 import { useParams } from 'solito/navigation'
+import { useAuth } from '../../../hooks/auth'
 
 export default function Screen() {
-  const { id } = useParams()
+  const { id } = useParams<{ id: string }>()
+  const { signOut } = useAuth()
 
   return (
     <>
@@ -16,7 +18,7 @@ export default function Screen() {
           gestureDirection: 'horizontal',
         }}
       />
-      <UserDetailScreen id={id as string} />
+      <UserDetailScreen id={id} handleSignOut={signOut} />
     </>
   )
 }

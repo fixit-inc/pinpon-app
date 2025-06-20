@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -17,14 +17,26 @@
     <meta-data android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS" android:value="0"/>
     <activity android:name=".MainActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|uiMode" android:launchMode="singleTask" android:windowSoftInputMode="adjustResize" android:theme="@style/Theme.App.SplashScreen" android:exported="true" android:screenOrientation="portrait">
       <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="native"/>
+        <data android:scheme="exp+native"/>
+      </intent-filter>
+    </activity>
+    <activity android:name=".BrowserLauncherActivity" android:theme="@style/Theme.App.SplashScreen" android:exported="true">
+      <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
+    </activity>
+    <activity android:name="com.auth0.android.provider.RedirectActivity" tools:node="replace" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="exp+native"/>
+        <data android:scheme="com.anonymous.xnative.auth0" android:host="dev-2hc0h80scsuim0eq.jp.auth0.com"/>
+        <data android:scheme="com.anonymous.xnative.auth0" android:host="dev-2hc0h80scsuim0eq.jp.auth0.com"/>
       </intent-filter>
     </activity>
   </application>

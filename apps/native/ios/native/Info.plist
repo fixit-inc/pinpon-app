@@ -27,6 +27,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
+          <string>native</string>
           <string>com.anonymous.xnative</string>
         </array>
       </dict>
@@ -34,6 +35,14 @@
         <key>CFBundleURLSchemes</key>
         <array>
           <string>exp+native</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLName</key>
+        <string>auth0</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.anonymous.xnative.auth0</string>
         </array>
       </dict>
     </array>

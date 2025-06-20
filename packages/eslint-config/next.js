@@ -46,4 +46,10 @@ export const nextJsConfig = [
       'react/react-in-jsx-scope': 'off',
     },
   },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      '@typescript-eslint/no-empty-object-type': 'off',
+    },
+  },
 ]

@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native": ["react-native-web"]
+      "react-native": ["react-native-web"],
+      "@/*": ["src/*"]
     },
     "plugins": [
       {
@@ -11,6 +12,6 @@
       }
     ]
   },
-  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js", ".next/types/**/*.ts"],
+  "include": ["src", "next-env.d.ts", "next.config.js", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
